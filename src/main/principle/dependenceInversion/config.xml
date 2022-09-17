@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<class>
+    <!--通过excel读取 -->
+    <className>ExcelDataConvertor</className>
+    <!--通过txt读取数据-->
+<!--    <className>TXTDataConvertor</className>-->
+</class>
+
