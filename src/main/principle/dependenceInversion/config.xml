@@ -2,8 +2,8 @@
 
 <class>
     <!--通过excel读取 -->
-    <className>ExcelDataConvertor</className>
+<!--    <className>ExcelDataConvertor</className>-->
     <!--通过txt读取数据-->
-<!--    <className>TXTDataConvertor</className>-->
+    <className>TXTDataConvertor</className>
 </class>
 
