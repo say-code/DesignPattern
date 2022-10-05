@@ -1,6 +1,15 @@
 package main.factoryMethod.example;
 
+import main.principle.dependenceInversion.IDataConvertor;
+import main.utils.XmlRead;
+import org.dom4j.Document;
+import org.dom4j.DocumentException;
+import org.dom4j.Element;
+import org.dom4j.io.SAXReader;
 import org.junit.Test;
+
+import java.io.File;
+import java.io.UnsupportedEncodingException;
 
 /**
  * @author sayCode
@@ -15,16 +24,11 @@ public class Client {
     Log log;
 
     @Test
-    public void fileLogTest(){
-        factory = new FileLogFactory();
+    public void start(){
+        XmlRead xmlRead = new XmlRead("factoryConfig.xml");
+        this.factory = (LogFactory)xmlRead.newInstance();
         log = factory.createLog();
         log.writeLog();
+    }
     }
 
-    @Test
-    public void databaseTest(){
-        factory = new DatabaseLogFactory();
-        log = factory.createLog();
-        log.writeLog();
-    }
-}
