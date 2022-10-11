@@ -39,5 +39,6 @@ public class CarAdapter implements CarController{
     @Override
     public void light() {
         carAdapterLogger.info("2020144131:我发光了（原始版）");
+        lamp.twinkle();
     }
 }
