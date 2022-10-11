@@ -1,5 +1,6 @@
 package main.factoryMethod.ImgRead;
 
+import main.utils.XmlRead;
 import org.junit.Test;
 
 /**
@@ -15,16 +16,11 @@ public class ImageReaderTest {
 
     ImageReader imageReader;
 
-    @Test
-    public void gifReader(){
-        factory = new GifReaderFactory();
-        imageReader = factory.createImageReader();
-        imageReader.readImg();
-    }
+    XmlRead xmlRead = new XmlRead("config.xml", this);
 
     @Test
-    public void jpgReader(){
-        factory = new JpgReaderFactory();
+    public void imgReader(){
+        factory = (ImageReaderFactory) xmlRead.newInstance();
         imageReader = factory.createImageReader();
         imageReader.readImg();
     }

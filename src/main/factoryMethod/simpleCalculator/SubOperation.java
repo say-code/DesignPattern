@@ -10,6 +10,6 @@ package main.factoryMethod.simpleCalculator;
 public class SubOperation extends Operation{
     @Override
     public int getResult() {
-        return numberA+numberB;
+        return numberA-numberB;
     }
 }
